@@ -8,13 +8,16 @@ btnElFef[i].addEventListener('click', function () {
     let whole = Number(inputElRef.value);
     let buttons = btnElFef[i].value
     let result = ((whole * buttons) / 100) + whole;
-    resultElRef.innerHTML = result
+    resultElRef.innerHTML = result + '₮'
     console.log(result)
   })
 }
 
-
-
+const ResetbuttonElRef = document.getElementById('reset')
+ResetbuttonElRef.addEventListener ('click', function(){
+  resultElRef.innerHTML = "";
+  inputElRef.value = "";
+})
 
 
 
